@@ -5,36 +5,132 @@
     <bds />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Add To Bag challenge</title>
-
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Custom Fit Polo Bear Oxford Shirt - Polo Ralph Lauren</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Add To Bag challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+  <body>
+    <div class="container">
+      <div class="product-page">
+        <!-- Product Images Section -->
+        <div class="product-images">
+          <div class="thumbnail-images">
+            <img
+              src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=80&h=100&fit=crop"
+              alt="Navy Blue Shirt"
+              class="thumbnail active"
+              data-main="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=500&h=600&fit=crop"
+              data-zoom="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800&h=960&fit=crop"
+              data-color="navy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=80&h=100&fit=crop"
+              alt="Gray Shirt"
+              class="thumbnail"
+              data-main="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=600&fit=crop"
+              data-zoom="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&h=960&fit=crop"
+              data-color="gray"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=80&h=100&fit=crop"
+              alt="Dark Gray Shirt"
+              class="thumbnail"
+              data-main="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&h=600&fit=crop"
+              data-zoom="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&h=960&fit=crop"
+              data-color="dark-gray"
+            />
+          </div>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+          <div class="main-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=500&h=600&fit=crop"
+              alt="Custom Fit Polo Bear Oxford Shirt - Navy Blue"
+              class="main-image"
+              id="mainImage"
+            />
+            <div class="image-zoom-overlay" id="zoomOverlay">
+              <img
+                src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800&h=960&fit=crop"
+                alt="Custom Fit Polo Bear Oxford Shirt - Zoomed View"
+                class="zoomed-image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="product-details">
+          <div class="brand-name">POLO RALPH</div>
+
+          <div class="product-header">
+            <h1 class="product-title">Custom Fit Polo Bear Oxford Shirt</h1>
+          </div>
+
+          <div class="product-description">
+            <p>Blue polo with a classic cut. Made of smooth and soft cotton.</p>
+          </div>
+
+          <div class="product-price">
+            <span class="current-price">$99.00</span>
+            <span class="discount-badge">-25%</span> <br/>
+            <div class="original-price">$132.00</div>
+          </div>
+
+          <!-- Size Selection -->
+          <div class="size-selection">
+            <h3 class="section-title">CHOOSE SIZE</h3>
+            <div class="size-options">
+              <button class="size-option" data-size="S">S</button>
+              <button class="size-option selected" data-size="M">M</button>
+              <button class="size-option" data-size="L">L</button>
+              <button class="size-option" data-size="XL">XL</button>
+              <button class="size-option" data-size="XXL">XXL</button>
+            </div>
+          </div>
+
+          <!-- Add to Bag Section -->
+          <div class="add-to-bag-section">
+            <button class="add-to-bag-btn" id="addToBagBtn">
+              <span class="btn-text">ADD TO BAG</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Added to Bag!</h3>
+          <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-product-info">
+            <img
+              src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=80&h=96&fit=crop"
+              alt="Premium Polo Shirt"
+              class="modal-product-image"
+            />
+            <div class="modal-product-details">
+              <h4>Custom Fit Polo Bear Oxford Shirt</h4>
+              <p>
+                Size: <span id="modalSize">M</span> | Color:
+                <span id="modalColor">Navy Blue</span>
+              </p>
+              <p>Quantity: <span id="modalQuantity">1</span></p>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-secondary" id="continueShopping">
+              Continue Shopping
+            </button>
+            <button class="btn btn-primary" id="viewBag">View Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
