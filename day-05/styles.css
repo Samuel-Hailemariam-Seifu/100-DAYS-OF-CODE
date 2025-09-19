@@ -1,0 +1,619 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto Slab;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Recipe Layout */
+.recipe-layout {
+    display: flex;
+    min-height: 400px;
+}
+
+/* Left Section - Recipe Image */
+.recipe-image-section {
+    flex: 1;
+    position: relative;
+    background: #1a1a1a;
+}
+
+.recipe-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 12px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+}
+
+/* Right Section - Recipe Content */
+.recipe-content-section {
+    flex: 1;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: white;
+}
+
+/* Recipe Header */
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stars {
+    display: flex;
+    gap: 1px;
+}
+
+.star {
+    font-size: 16px;
+    color: #d1d5db;
+}
+
+.star.filled {
+    color: #fbbf24;
+}
+
+.star.outline {
+    color: #d1d5db;
+}
+
+.rating-text {
+    font-size: 12px;
+    color: #888;
+    font-weight: 400;
+}
+
+.recipe-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Recipe Details */
+.recipe-details {
+    display: flex;
+    gap: 18px;
+    padding: 10px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-icon {
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 9px;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.detail-value {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Recipe Description */
+.recipe-description {
+    margin-bottom: 12px;
+}
+
+.recipe-description p {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+    margin-bottom: 18px;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ingredient-item:hover {
+    background: #f8fafc;
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin: 0 -8px;
+}
+
+.ingredient-item.checked {
+    background: #f0fdf4;
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin: 0 -8px;
+}
+
+.ingredient-item.checked .ingredient-text {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+.ingredient-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 2px;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.ingredient-checkbox:checked {
+    background: #22c55e;
+    border-color: #22c55e;
+}
+
+.ingredient-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.ingredient-text {
+    font-size: 12px;
+    color: #444;
+    flex: 1;
+    transition: all 0.2s ease;
+}
+
+/* Instructions Section */
+.instructions-section {
+    margin-bottom: 8px;
+}
+
+.instructions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.instruction-step {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.instruction-step:hover {
+    background: #f8fafc;
+    padding: 8px;
+    border-radius: 6px;
+    margin: 0 -8px;
+}
+
+.step-number {
+    width: 24px;
+    height: 24px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 11px;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.step-number.completed {
+    background: #22c55e;
+}
+
+.step-content {
+    flex: 1;
+    padding-top: 1px;
+}
+
+.step-content p {
+    font-size: 12px;
+    color: #444;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 24px 0;
+}
+
+.modal-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+/* Timer Styles */
+.timer-display {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.timer-time {
+    font-size: 48px;
+    font-weight: 700;
+    color: #3b82f6;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 8px;
+}
+
+.timer-label {
+    font-size: 14px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.timer-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.timer-btn:nth-child(1) {
+    background: #22c55e;
+    color: white;
+}
+
+.timer-btn:nth-child(2) {
+    background: #f59e0b;
+    color: white;
+}
+
+.timer-btn:nth-child(3) {
+    background: #ef4444;
+    color: white;
+}
+
+.timer-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.ingredient-item {
+    animation: slideIn 0.3s ease-out;
+}
+
+.instruction-step {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 8px;
+    }
+
+    .recipe-layout {
+        flex-direction: column;
+    }
+
+    .recipe-image-section {
+        height: 250px;
+    }
+
+    .recipe-content-section {
+        padding: 25px 20px;
+    }
+
+    .recipe-title {
+        font-size: 20px;
+    }
+
+    .recipe-details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .detail-item {
+        justify-content: flex-start;
+    }
+
+    .section-title {
+        font-size: 13px;
+    }
+
+    .ingredients-section,
+    .instructions-section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-content-section {
+        padding: 20px 15px;
+    }
+
+    .recipe-title {
+        font-size: 20px;
+    }
+
+    .recipe-details {
+        padding: 15px 0;
+    }
+
+    .detail-content {
+        gap: 8px;
+    }
+
+    .detail-label {
+        font-size: 10px;
+    }
+
+    .detail-value {
+        font-size: 13px;
+    }
+
+    .recipe-description p {
+        font-size: 13px;
+    }
+
+    .ingredient-text {
+        font-size: 13px;
+    }
+
+    .step-content p {
+        font-size: 13px;
+    }
+
+    .step-number {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+
+    .timer-time {
+        font-size: 36px;
+    }
+
+    .timer-controls {
+        flex-direction: column;
+    }
+}
+
+/* Focus states for accessibility */
+.ingredient-checkbox:focus,
+.timer-btn:focus,
+.modal-close:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .ingredient-item {
+        border: 1px solid #000000;
+    }
+
+    .ingredient-checkbox:checked {
+        background: #000000;
+        border-color: #000000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    .ingredient-item,
+    .instruction-step {
+        animation: none;
+    }
+
+    * {
+        transition: none;
+    }
+
+    .ingredient-item:hover,
+    .instruction-step:hover {
+        transform: none;
+    }
+}

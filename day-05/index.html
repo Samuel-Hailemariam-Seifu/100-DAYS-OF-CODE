@@ -5,36 +5,203 @@
     <bds />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Recipe challenge</title>
-
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sweet Iced Coffee with Coconut Milk - Recipe</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Recipe challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+  <body>
+    <div class="container">
+      <!-- Recipe Layout -->
+      <div class="recipe-layout">
+        <!-- Left Section - Recipe Image -->
+        <div class="recipe-image-section">
+          <div class="recipe-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop"
+              alt="Sweet Iced Coffee with Coconut Milk"
+              class="recipe-image"
+            />
+            <div class="image-overlay-text">
+              <span>SWEET ICED COFFEE WITH COCONUT MILK</span>
+            </div>
+          </div>
+        </div>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+        <!-- Right Section - Recipe Content -->
+        <div class="recipe-content-section">
+          <!-- Rating and Title -->
+          <div class="recipe-header">
+            <div class="rating">
+              <div class="stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star outline">★</span>
+              </div>
+              <span class="rating-text">(189)</span>
+            </div>
+            <h1 class="recipe-title">Sweet iced Coffee with Coconut Milk</h1>
+          </div>
+
+          <!-- Recipe Details -->
+          <div class="recipe-details">
+            <div class="detail-item">
+              <div class="detail-icon">⏰</div>
+              <div class="detail-content">
+                <span class="detail-label">TOTAL TIME</span>
+                <span class="detail-value">10 minutes</span>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon">👨‍🍳</div>
+              <div class="detail-content">
+                <span class="detail-label">LEVEL</span>
+                <span class="detail-value">Easy</span>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon">💰</div>
+              <div class="detail-content">
+                <span class="detail-label">BUDGET</span>
+                <span class="detail-value">Under $2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="recipe-description">
+            <p>
+              Sweet Iced Coffee with coconut milk is easy to make and stores
+              well in the fridge. Make a large batch and save yourself a few
+              trips to the coffee shop.
+            </p>
+          </div>
+
+          <!-- Ingredients Section -->
+          <div class="ingredients-section">
+            <h2 class="section-title">INGREDIENTS</h2>
+            <div class="ingredients-list">
+              <label class="ingredient-item">
+                <input type="checkbox" class="ingredient-checkbox" checked />
+                <span class="ingredient-text"
+                  >3 tablespoon Espresso coffee powder</span
+                >
+              </label>
+
+              <label class="ingredient-item">
+                <input type="checkbox" class="ingredient-checkbox" />
+                <span class="ingredient-text">1 cup off the boil water</span>
+              </label>
+
+              <label class="ingredient-item">
+                <input type="checkbox" class="ingredient-checkbox" />
+                <span class="ingredient-text">1 cup Coconut milk</span>
+              </label>
+
+              <label class="ingredient-item">
+                <input type="checkbox" class="ingredient-checkbox" />
+                <span class="ingredient-text">3 tablespoon Condensed milk</span>
+              </label>
+
+              <label class="ingredient-item">
+                <input type="checkbox" class="ingredient-checkbox" />
+                <span class="ingredient-text"
+                  >3 tablespoon Espresso coffee powder</span
+                >
+              </label>
+            </div>
+          </div>
+
+          <!-- Instructions Section -->
+          <div class="instructions-section">
+            <h2 class="section-title">INSTRUCTIONS</h2>
+            <div class="instructions-list">
+              <div class="instruction-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <p>Boil some water and let sit for 1-2 minutes.</p>
+                </div>
+              </div>
+
+              <div class="instruction-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <p>
+                    Put the coffee grounds into a cafetière and pour in the
+                    water.
+                  </p>
+                </div>
+              </div>
+
+              <div class="instruction-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <p>
+                    Let the coffee steep for 5 minutes then slowly press down
+                    the plunger on your Cafetière.
+                  </p>
+                </div>
+              </div>
+
+              <div class="instruction-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <p>
+                    Pour the coffee into a jug, allow to cool then chill for
+                    several hours.
+                  </p>
+                </div>
+              </div>
+
+              <div class="instruction-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <p>
+                    Whisk in the coconut milk and condensed milk and serve over
+                    plenty of ice.
+                  </p>
+                </div>
+              </div>
+
+              <div class="instruction-step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                  <p>
+                    This coffee can be stored in the fridge for up to 5 days.
+                    Shake or stir again before serving.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Cooking Timer Modal -->
+    <div class="modal" id="timerModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Cooking Timer</h3>
+          <button class="modal-close" id="closeTimerModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="timer-display">
+            <div class="timer-time" id="timerDisplay">10:00</div>
+            <div class="timer-label">Total Time</div>
+          </div>
+          <div class="timer-controls">
+            <button class="timer-btn" id="startTimer">Start</button>
+            <button class="timer-btn" id="pauseTimer">Pause</button>
+            <button class="timer-btn" id="resetTimer">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
