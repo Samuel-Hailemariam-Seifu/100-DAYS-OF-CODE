@@ -5,36 +5,147 @@
     <bds />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Contact Us challenge</title>
-
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Us - Windler, Lockman and McClure</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Contact Us challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+  <body>
+    <div class="container">
+      <!-- Left Section - Contact Info -->
+      <div class="contact-info">
+        <h1 class="contact-title">Contact Us</h1>
+        <p class="contact-description">
+          Get in touch with us! Whether you have questions, feedback, or just
+          want to say hello, we're here for you.
+        </p>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+        <!-- Address Card -->
+        <div class="address-card">
+          <div class="address-content">
+            <h3 class="company-name">Windler, Lockman and McClure</h3>
+            <p class="address-text">3629 N Cole Rd, Boise, Illinois</p>
+          </div>
+        </div>
+
+        <!-- Map Pin -->
+        <div class="map-pin">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Right Section - Contact Form -->
+      <div class="contact-form-section">
+        <form class="contact-form" id="contactForm">
+          <h2 class="form-title">Send us a Message</h2>
+
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-input"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              required
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <!-- Phone Field -->
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form-input"
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <!-- Preferred Contact Method -->
+          <div class="form-group">
+            <label class="form-label"
+              >Preferred contact method of communication</label
+            >
+            <div class="radio-group">
+              <label class="radio-option">
+                <input
+                  type="radio"
+                  name="contactMethod"
+                  value="email"
+                  class="radio-input"
+                />
+                <span class="radio-label">Email</span>
+              </label>
+              <label class="radio-option">
+                <input
+                  type="radio"
+                  name="contactMethod"
+                  value="phone"
+                  class="radio-input"
+                  checked
+                />
+                <span class="radio-label">Phone</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-textarea"
+              rows="4"
+              required
+              placeholder="Enter your message here..."
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
     </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Message Sent Successfully!</h3>
+          <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Thank you for contacting us. We'll get back to you as soon as
+            possible using your preferred contact method.
+          </p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="modalOk">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
