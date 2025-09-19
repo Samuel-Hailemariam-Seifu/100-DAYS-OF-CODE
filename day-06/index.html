@@ -5,36 +5,105 @@
     <bds />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Image Carousel challenge</title>
-
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Image Carousel - Nature Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Image Carousel challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+  <body>
+    <div class="carousel-container">
+      <!-- Main Image Section -->
+      <div class="main-image-section">
+        <!-- Left Arrow -->
+        <button class="nav-arrow nav-arrow-left" id="prevBtn">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="15,18 9,12 15,6"></polyline>
+          </svg>
+        </button>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+        <!-- Main Image -->
+        <div class="main-image-container">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+            alt="Kingfisher Bird"
+            class="main-image"
+            id="mainImage"
+          />
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="nav-arrow nav-arrow-right" id="nextBtn">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="9,18 15,12 9,6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Thumbnail Gallery -->
+      <div class="thumbnail-gallery">
+        <div class="thumbnail-item" data-index="0">
+          <img
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=150&h=100&fit=crop"
+            alt="White Flowers"
+            class="thumbnail-image"
+          />
+        </div>
+
+        <div class="thumbnail-item" data-index="1">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=150&h=100&fit=crop"
+            alt="Fern Fronds"
+            class="thumbnail-image"
+          />
+        </div>
+
+        <div class="thumbnail-item active" data-index="2">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=100&fit=crop"
+            alt="Kingfisher Bird"
+            class="thumbnail-image"
+          />
+        </div>
+
+        <div class="thumbnail-item" data-index="3">
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=100&fit=crop"
+            alt="Lake and Forest"
+            class="thumbnail-image"
+          />
+        </div>
+
+        <div class="thumbnail-item" data-index="4">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=150&h=100&fit=crop"
+            alt="Old Tree"
+            class="thumbnail-image"
+          />
+        </div>
+
+        <div class="thumbnail-item" data-index="5">
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=100&fit=crop"
+            alt="Rolling Hills"
+            class="thumbnail-image"
+          />
+        </div>
+      </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
