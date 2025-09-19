@@ -5,36 +5,195 @@
     <bds />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Create Account challenge</title>
-
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Create Account - Sign Up</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Create Account challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+  <body>
+    <div class="container">
+      <!-- Left Section - Form -->
+      <div class="form-section">
+        <div class="form-container">
+          <!-- Header -->
+          <div class="form-header">
+            <p class="start-free">START FOR FREE</p>
+            <h1 class="form-title">Create new account</h1>
+          </div>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+          <!-- Form -->
+          <form class="account-form" id="accountForm">
+            <!-- First Name Field -->
+            <div class="form-group">
+              <label for="firstName" class="form-label">First name</label>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  class="form-input"
+                  value="John"
+                  required
+                />
+                <div class="input-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Last Name Field -->
+            <div class="form-group">
+              <label for="lastName" class="form-label">Last name</label>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  class="form-input"
+                  value="Doe"
+                  required
+                />
+                <div class="input-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <div class="input-container">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  value="john.doe@email.com"
+                  required
+                />
+                <div class="input-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-container">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-input password-input"
+                  value="••••••••"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="passwordToggle"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Sign In Link -->
+            <div class="signin-link">
+              <p>
+                Already have an account?
+                <a href="#" class="signin-text">Sign In</a>
+              </p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn" id="submitBtn">
+              Create account
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Section - Background -->
+      <div class="background-section">
+        <div class="gradient-background">
+          <div class="grid-pattern"></div>
+          <div class="abstract-shape shape-1"></div>
+          <div class="abstract-shape shape-2"></div>
+          <div class="abstract-shape shape-3"></div>
+          <div class="abstract-shape shape-4"></div>
+          <div class="abstract-shape shape-5"></div>
+          <div class="abstract-shape shape-6"></div>
+          <div class="floating-line line-1"></div>
+          <div class="floating-line line-2"></div>
+          <div class="floating-line line-3"></div>
+        </div>
+      </div>
     </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Account Created Successfully!</h3>
+          <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Welcome! Your account has been created successfully. You can now
+            start using our service.
+          </p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="modalOk">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

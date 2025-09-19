@@ -17,9 +17,11 @@ This project implements a beautiful, responsive recipe page for "Sweet Iced Coff
 ## User Story & Acceptance Criteria
 
 ### User Story
+
 As a user, I want a visually appealing recipe page that clearly outlines the steps and ingredients needed to make Sweet Iced Coffee with Coconut Milk, allowing me to easily follow along and prepare the drink.
 
 ### Acceptance Criteria ✅
+
 - ✅ The recipe title "Sweet Iced Coffee with Coconut Milk" is prominently displayed
 - ✅ The recipe features a high-quality image of the finished drink
 - ✅ User ratings are visible and indicate the popularity of the recipe
@@ -32,6 +34,7 @@ As a user, I want a visually appealing recipe page that clearly outlines the ste
 ## Technical Implementation
 
 ### HTML Structure
+
 - **Semantic Layout**: Clean, accessible HTML structure with proper headings
 - **Two-Column Design**: `.recipe-layout` with image and content sections
 - **Interactive Elements**: Checkboxes for ingredients and numbered steps
@@ -39,6 +42,7 @@ As a user, I want a visually appealing recipe page that clearly outlines the ste
 - **Modal System**: Timer modal for cooking assistance
 
 ### CSS Styling
+
 - **Flexbox Layout**: Responsive two-column design
 - **Modern Typography**: System fonts with proper hierarchy
 - **Color Scheme**: Professional grays and whites with accent colors
@@ -46,6 +50,7 @@ As a user, I want a visually appealing recipe page that clearly outlines the ste
 - **Mobile-First**: Responsive design with mobile breakpoints
 
 ### JavaScript Functionality
+
 - **Ingredient Tracking**: Check/uncheck ingredients with visual feedback
 - **Step Completion**: Mark cooking steps as completed
 - **Cooking Timer**: 10-minute timer with start/pause/reset functionality
@@ -56,18 +61,21 @@ As a user, I want a visually appealing recipe page that clearly outlines the ste
 ## Design Specifications
 
 ### Layout
+
 - **Container**: Max-width 1000px, centered layout
 - **Image Section**: Full-height left column with overlay text
 - **Content Section**: Right column with recipe details
 - **Spacing**: Compact, professional spacing throughout
 
 ### Color Scheme
+
 - **Background**: Clean white background
 - **Text**: Dark grays (#333, #444, #777, #888) for hierarchy
 - **Accents**: Subtle borders and hover effects
 - **Overlay**: Dark overlay on image with white text
 
 ### Typography
+
 - **Font Family**: Arial, sans-serif for consistency
 - **Title**: 20px, bold weight
 - **Body Text**: 12px for optimal readability
@@ -77,12 +85,14 @@ As a user, I want a visually appealing recipe page that clearly outlines the ste
 ## Interactive Features
 
 ### Recipe Management
+
 1. **Ingredient Checkboxes**: Click to mark ingredients as used
 2. **Step Tracking**: Visual feedback for completed steps
 3. **Cooking Timer**: 10-minute countdown with controls
 4. **Progress Saving**: Local storage for recipe progress
 
 ### Visual Feedback
+
 - **Hover Effects**: Subtle animations on interactive elements
 - **Active States**: Clear indication of selected/checked items
 - **Loading States**: Smooth transitions and feedback
@@ -91,11 +101,13 @@ As a user, I want a visually appealing recipe page that clearly outlines the ste
 ## Responsive Design
 
 ### Breakpoints
+
 - **Desktop**: 768px and above - Full two-column layout
 - **Tablet**: 768px and below - Stacked single-column layout
 - **Mobile**: 480px and below - Compact mobile layout
 
 ### Mobile Optimizations
+
 - **Stacked Layout**: Image above content on mobile
 - **Touch-Friendly**: Larger touch targets for mobile
 - **Optimized Typography**: Readable font sizes on small screens
@@ -128,6 +140,7 @@ day-05/
 ## Key Features Implemented
 
 ### Core Functionality
+
 - ✅ **Recipe Display**: Complete recipe with image and details
 - ✅ **Ingredient Tracking**: Interactive checkboxes for ingredients
 - ✅ **Step-by-Step Instructions**: Clear cooking instructions
@@ -135,6 +148,7 @@ day-05/
 - ✅ **Responsive Design**: Works on all device sizes
 
 ### Enhanced Features
+
 - ✅ **Image Overlay**: Recipe title on the main image
 - ✅ **Rating System**: 4.5-star rating with review count
 - ✅ **Recipe Details**: Time, difficulty, and budget information
@@ -143,6 +157,7 @@ day-05/
 - ✅ **Accessibility**: Keyboard navigation and focus states
 
 ### Performance Optimizations
+
 - ✅ **Image Optimization**: Proper sizing and compression
 - ✅ **Smooth Transitions**: CSS animations for better UX
 - ✅ **Local Storage**: Efficient data persistence
@@ -151,12 +166,14 @@ day-05/
 ## Recipe Details
 
 ### Sweet Iced Coffee with Coconut Milk
+
 - **Rating**: 4.5 stars (189 reviews)
 - **Total Time**: 10 minutes
 - **Difficulty**: Easy
 - **Budget**: Under $2
 
 ### Ingredients
+
 - 3 tablespoon Espresso coffee powder
 - 1 cup off the boil water
 - 1 cup Coconut milk
@@ -164,6 +181,7 @@ day-05/
 - 3 tablespoon Espresso coffee powder (duplicate for design accuracy)
 
 ### Instructions
+
 1. Boil some water and let sit for 1-2 minutes
 2. Put the coffee grounds into a cafetière and pour in the water
 3. Let the coffee steep for 5 minutes then slowly press down the plunger on your Cafetière
@@ -174,6 +192,7 @@ day-05/
 ## Future Enhancements
 
 ### Potential Improvements
+
 - **Nutritional Information**: Add calorie and nutrition facts
 - **Serving Size**: Adjustable serving size calculator
 - **Cooking Notes**: User notes and modifications
@@ -183,6 +202,7 @@ day-05/
 - **Ingredient Substitutions**: Alternative ingredient suggestions
 
 ### Technical Enhancements
+
 - **Progressive Web App**: PWA features for offline use
 - **Image Gallery**: Multiple recipe photos
 - **Search Functionality**: Search within recipe content
@@ -192,6 +212,7 @@ day-05/
 ## Learning Outcomes
 
 ### Skills Developed
+
 - **Responsive Design**: Mobile-first approach with flexbox
 - **JavaScript ES6+**: Modern JavaScript features and DOM manipulation
 - **CSS Layout**: Advanced flexbox and responsive design
@@ -200,6 +221,7 @@ day-05/
 - **Performance**: Image optimization and local storage
 
 ### Best Practices Applied
+
 - **Semantic HTML**: Proper structure and accessibility
 - **CSS Organization**: Modular and maintainable styles
 - **JavaScript Patterns**: Event handling and state management
@@ -209,12 +231,14 @@ day-05/
 ## Resources
 
 ### Documentation
+
 - [MDN Web Docs](https://developer.mozilla.org/) - Web standards and APIs
 - [CSS Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Flexbox layout
 - [Local Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) - Browser storage
 - [Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - Web accessibility
 
 ### Tools Used
+
 - **HTML5**: Semantic markup and accessibility
 - **CSS3**: Modern styling with flexbox and animations
 - **Vanilla JavaScript**: No frameworks, pure JavaScript
